@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            border: 5px solid white;
+            position: absolute;
+            width: 300px;
+            height: 450px;
+            border-radius: 30px;
+            box-shadow: 5px 5px 10px black;
+            background-color: transparent;
+        }
+        #display{
+            width: 250px;
+            height: 50px;
+            border: 2px 2px groove black;
+            position: relative;
+            top: 30px;
+            left: 16px;
+            border-radius: 5px;
+            outline: none;
+            color: black;
+            font-size: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: 2px 2px 5px black,-2px -2px 5px black;
+        }
+        input{
+            position: relative;
+            top: 30px;
+            width: 50px;
+            height: 50px;
+            left: 45px;
+            border-radius: 100%;
+            font-size: 25px;
+            box-shadow: 2px 2px 5px black;
+        }
+        #clear{
+            font-size: 25px;
+        }
+        #clear:hover{
+            background-color: rgb(255, 183, 1);
+            color: white;
+        }
+        .plus:hover{
+            background-color: rgb(255, 183, 1);
+            color: white;
+        }
+        #equals:hover{
+            background-color: rgb(255, 183, 1);
+            color: white;
+        }
+        h1{
+            z-index: 5;
+            position: relative;
+            font-size: 150px;
+            right: 186px;
+        }
+        #a{
+            color: aquamarine;
+            text-shadow: 5px 5px 10px rgb(5, 255, 255),-5px -5px 10px rgb(5, 255, 255);
+        }
+        #b{
+            color: aqua;
+            z-index: -1;
+            text-shadow: 5px 5px 10px aquamarine,-5px -5px 10px aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="a">Calcu</h1>
+    <h1 id="b">lator</h1>
+    <div id="container">
+        <form name="calc">
+            <input id="display" name="Answer">
+            <br><br>
+            <input type="button" value="1" onclick="calc.Answer.value+='1'">
+            <input type="button" value="2" onclick="calc.Answer.value+='2'">
+            <input type="button" value="3" onclick="calc.Answer.value+='3'">
+            <input class="plus" type="button" value="+" onclick="calc.Answer.value+='+'">
+            <br><br>
+            <input type="button" value="4" onclick="calc.Answer.value+='4'">
+            <input type="button" value="5" onclick="calc.Answer.value+='5'">
+            <input type="button" value="6" onclick="calc.Answer.value+='6'">
+            <input class="plus" type="button" value="-" onclick="calc.Answer.value+='-'">
+            <br><br>
+            <input type="button" value="7" onclick="calc.Answer.value+='7'">
+            <input type="button" value="8" onclick="calc.Answer.value+='8'">
+            <input type="button" value="9" onclick="calc.Answer.value+='9'">
+            <input class="plus" type="button" value="x" onclick="calc.Answer.value+='*'">
+            <br><br>
+            <input type="button" value="/" onclick="calc.Answer.value+='/'">
+            <input type="button" value="0" onclick="calc.Answer.value+='0'">
+            <input type="button" value="." onclick="calc.Answer.value+='.'">
+            <input class="plus" type="button" value="%" onclick="calc.Answer.value+='%'">
+            <br><br>
+            <input id="clear" type="button" value="AC" onclick="calc.Answer.value=''">
+            <input id="equals" type="button" value="=" onclick="calc.Answer.value=eval(calc.Answer.value)">
+        </form>
+    </div>
+</body>
+</html>
